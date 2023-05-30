@@ -1,0 +1,63 @@
+%-----------------------------------------------------------------------------
+% Author: Rayla Kurosaki
+% GitHub: https://github.com/rkp1503
+%-----------------------------------------------------------------------------
+\documentclass[12pt,twoside]{rayla-thesis-dissertation}
+
+%-----------------------------------------------------------------------------
+% Thesis/Dissertation Information
+%-----------------------------------------------------------------------------
+\myUniversity{University Name}
+\myCollege{College Name}
+\myDepartment{Department Name}
+\myLogo{logo.eps}
+\myTitle{Thesis/Dissertation Title}
+\myName{Student Name}
+\myAdvisor{Advisor Name}
+\submissionDate{Submission Date}
+
+%-----------------------------------------------------------------------------
+% Start of Document
+%-----------------------------------------------------------------------------
+\begin{document}
+
+    \maketitle
+
+    \tableofcontents
+
+    %-------------------------------------------------------------------------
+    % Abstract
+    %-------------------------------------------------------------------------
+    \begin{abstract}
+        Using \texttt{biblatex} you can display a bibliography divided into sections, depending on citation type. Let's cite! Einstein's journal paper \cite{einstein} and Dirac's book \cite{dirac} are physics-related items. Next, \textit{The \LaTeX\ Companion} book \cite{latexcompanion}, Donald Knuth's website \cite{knuthwebsite}, \textit{The Comprehensive Tex Archive Network} (CTAN) \cite{ctan} are \LaTeX-related items; but the others, Donald Knuth's items, \cite{knuth-fa,knuth-acp} are dedicated to programming. 
+    \end{abstract}
+
+    %-------------------------------------------------------------------------
+    % Body
+    %-------------------------------------------------------------------------
+    \input{contents/chapter01.tex}
+    \input{contents/chapter02.tex}
+    \input{contents/chapter03.tex}
+    \input{contents/chapter04.tex}
+    \input{contents/chapter05.tex}
+
+    %-------------------------------------------------------------------------
+    % Bibliography
+    %-------------------------------------------------------------------------
+    \printbibliography[title={Bibliography},heading=bibintoc]
+    % % Filter by type
+    % \printbibliography[title={Articles},type=article,heading=subbibintoc]
+    % \printbibliography[title={Books},type=book,heading=subbibintoc]
+    % % Filter by keyword
+    % \printbibliography[title={Physics-related},keyword={physics},heading=subbibintoc]
+    % \printbibliography[title={\LaTeX-related only},keyword={latex},heading=subbibintoc]
+
+    %-------------------------------------------------------------------------
+    % Appendix
+    %-------------------------------------------------------------------------
+    \appendix
+    \input{appendices/appendix01.tex}
+    \input{appendices/appendix02.tex}
+    \input{appendices/appendix03.tex}
+
+\end{document}

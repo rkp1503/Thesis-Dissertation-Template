@@ -1,0 +1,107 @@
+%-----------------------------------------------------------------------------
+% Supported entry types
+%-----------------------------------------------------------------------------
+article, book, mvbook, inbook, bookinbook, suppbook, booklet, collection, 
+mvcollection, incollection, suppcollection, manual, misc, online, patent, 
+periodical, suppperiodical, proceedings, mvproceedings, inproceedings, 
+reference, mvreference, inreference, report, set, thesis, unpublished, custom, 
+conference, electronic, masterthesis, phdthesis, techreport
+
+%-----------------------------------------------------------------------------
+% Supported entry fields (The printed information depends on the bibliography style)
+%-----------------------------------------------------------------------------
+abstract, addendum, afterword, annotate, author, authortype, bookauthor, 
+bookpagination, booksubtitle, booktitle, chapter, commentator, date, doi, 
+edition, editor, editortype, eid, entrysubtype, eprint, eprinttype, 
+eprintclass, eventdate, eventtitle, file, foreword, holder, howpublished, 
+indextitle, institution, introduction, isan, isbn, ismn, isrn, issue, 
+issuesubtitle, issuetitle, iswc, journalsubtitle, journaltitle, label, 
+language, library, location, mainsubtitle, maintitle, month, note, number, 
+organization, origdate, origlanguage, origlocation, origpublisher, origtitle, 
+pages, pagetotal, pagination, part, publisher, pubstate, reprinttitle, series, 
+shortauthor, shortedition, shorthand, shorthandintro, shortjournal, 
+shortseries, shorttitle, subtitle, title, translator, type, url, venue, 
+version, volume, year
+
+%-----------------------------------------------------------------------------
+% Bibliography sorting options
+%-----------------------------------------------------------------------------
+nty: sort by name, title, year
+nyt: sort by name, year, title
+nyvt: sort by name, year, volume, title
+anyt: sort by alphabetic label, name, year, title
+anyvt: sort by alphabetic label, name, year, volume, title
+ydnt: sort by year (descending), name, title
+none: entries are processed in citation order
+
+%-----------------------------------------------------------------------------
+% Citations
+%-----------------------------------------------------------------------------
+@article{einstein,
+  author =       "Albert Einstein",
+  title =        "{Zur Elektrodynamik bewegter K{\"o}rper}. ({German}) [{On} the electrodynamics of moving bodies]",
+  journal =      "Annalen der Physik",
+  volume =       "322",
+  number =       "10",
+  pages =        "891--921",
+  year =         "1905",
+  DOI =          "http://dx.doi.org/10.1002/andp.19053221004",
+  keywords =     "physics"
+}
+
+@book{dirac,
+  title={The Principles of Quantum Mechanics},
+  author={Paul Adrien Maurice Dirac},
+  isbn={9780198520115},
+  series={International series of monographs on physics},
+  year={1981},
+  publisher={Clarendon Press},
+  keywords = {physics}
+}
+
+@book{latexcompanion,
+    author    = "Michel Goossens and Frank Mittelbach and Alexander Samarin",
+    title     = "The \LaTeX\ Companion",
+    year      = "1993",
+    publisher = "Addison-Wesley",
+    address   = "Reading, Massachusetts",
+    keywords  = "latex"
+}
+ 
+@online{knuthwebsite,
+    author    = "Donald Knuth",
+    title     = "Knuth: Computers and Typesetting",
+    url       = "http://www-cs-faculty.stanford.edu/~uno/abcde.html",
+    addendum = "(accessed: 01.09.2016)",
+    keywords  = "latex,knuth"
+}
+
+@inbook{knuth-fa,
+   author = "Donald E. Knuth",
+   title = "Fundamental Algorithms",
+   publisher = "Addison-Wesley",
+   year = "1973",
+   chapter = "1.2",
+   keywords  = "knuth,programming"
+}
+
+@book{knuth-acp,
+   author = "Donald E. Knuth",
+   publisher = "Addison-Wesley",
+   title = "The Art of Computer Programming",
+   series = "Four volumes",
+   year = "1968",
+   note = "Seven volumes planned",
+   keywords  = "knuth,programming"
+}
+
+@article{ctan,
+    author  = "George D. Greenwade",
+    title   = "The {C}omprehensive {T}ex {A}rchive {N}etwork ({CTAN})",
+    year    = "1993",
+    journal = "TUGBoat",
+    volume  = "14",
+    number  = "3",
+    pages   = "342--351",
+    keywords  = "latex"
+}

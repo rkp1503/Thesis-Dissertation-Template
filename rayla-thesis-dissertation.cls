@@ -3,7 +3,7 @@
 % GitHub: https://github.com/rkp1503
 %-----------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{rayla-thesis-dissertation}%[Rayla's Thesis/Dissertation's Class]
+\ProvidesClass{rayla-thesis-dissertation}[Rayla's Thesis and Dissertation Class]
 \LoadClass[twoside]{report}
 
 %-----------------------------------------------------------------------------
@@ -19,27 +19,17 @@
 \newcommand{\submissionDate}[1]{\newcommand{\submissionDateLoc}{#1}}
 
 %-----------------------------------------------------------------------------
-% 3rd Party Packages
-%-----------------------------------------------------------------------------
-\usepackage{amsmath}
-% \usepackage{amssymb}
-\usepackage[backend=biber,style=numeric,sorting=ynt]{biblatex}
-\usepackage{fancyhdr}
-\usepackage{float}
-\usepackage{geometry}
-\usepackage{graphicx}
-\usepackage{lipsum}
-% \usepackage{titlesec}
-% \usepackage{xcolor}
-
-%-----------------------------------------------------------------------------
 % Geometry
 %-----------------------------------------------------------------------------
-\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\usepackage{geometry}
+\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
     
 %-----------------------------------------------------------------------------
 % Custom Title Style
 %-----------------------------------------------------------------------------
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx}
 \renewcommand{\maketitle}{
     \thispagestyle{empty}
     \begin{center}
@@ -74,6 +64,7 @@
 %-----------------------------------------------------------------------------
 % Custom Headers and Footers
 %-----------------------------------------------------------------------------
+\usepackage{fancyhdr}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0.4pt}
 \fancyhead{}
@@ -95,4 +86,10 @@
 %-----------------------------------------------------------------------------
 % bibliography settings
 %-----------------------------------------------------------------------------
+\usepackage[backend=biber,style=numeric,sorting=ynt]{biblatex}
 \addbibresource{main.bib}
+
+%-----------------------------------------------------------------------------
+% Dummy text
+%-----------------------------------------------------------------------------
+\usepackage{lipsum}

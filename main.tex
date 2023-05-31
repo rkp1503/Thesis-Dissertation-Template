@@ -44,13 +44,14 @@
     %-------------------------------------------------------------------------
     % Bibliography
     %-------------------------------------------------------------------------
-    \printbibliography[title={Bibliography},heading=bibintoc]
-    % % Filter by type
-    % \printbibliography[title={Articles},type=article,heading=subbibintoc]
-    % \printbibliography[title={Books},type=book,heading=subbibintoc]
-    % % Filter by keyword
-    % \printbibliography[title={Physics-related},keyword={physics},heading=subbibintoc]
-    % \printbibliography[title={\LaTeX-related only},keyword={latex},heading=subbibintoc]
+    % \nocite{*}
+    \printbibliography[heading=bibintoc,title={Bibliography}]
+    % Filter by type
+    \printbibliography[heading=subbibintoc,title={Articles},type=article]
+    \printbibliography[heading=subbibintoc,title={Books},type=book]
+    % Filter by keyword
+    \printbibliography[heading=subbibintoc,title={Physics-related},keyword={physics}]
+    \printbibliography[heading=subbibintoc,title={\LaTeX-related only},keyword={latex}]
 
     %-------------------------------------------------------------------------
     % Appendix

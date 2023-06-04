@@ -19,42 +19,46 @@
 \newcommand{\submissionDate}[1]{\newcommand{\submissionDateLoc}{#1}}
 
 %-----------------------------------------------------------------------------
+% 3rd party packages
+%-----------------------------------------------------------------------------
+\usepackage{amsmath}
+\usepackage[backend=biber,style=numeric,sorting=ynt]{biblatex}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{graphicx,epstopdf}
+\usepackage{lipsum}
+
+%-----------------------------------------------------------------------------
 % Geometry
 %-----------------------------------------------------------------------------
-\usepackage{geometry}
 \geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
 \setlength\parindent{0pt}
+
+%-----------------------------------------------------------------------------
+% Setting figures directory
+%-----------------------------------------------------------------------------
+\graphicspath{{figures/}}
     
 %-----------------------------------------------------------------------------
 % Custom Title Style
 %-----------------------------------------------------------------------------
-\usepackage{amsmath}
-\usepackage{float}
-\usepackage{graphicx}
 \renewcommand{\maketitle}{
     \thispagestyle{empty}
     \begin{center}
         \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-
         \textsc{\LARGE \myUniversityLoc}\\[0.5cm]
-
         \textsc{\Large \myCollegeLoc}\\[0.5cm]
-
         \textsc{\large \myDepartmentLoc}\\[0.5cm]
-
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.15]{figures/\myLogoLoc}
+            \includegraphics[scale=0.15]{\myLogoLoc}
             \label{fig:logo}
         \end{figure}
-
         \HRule\\[0.4cm]
-
         {\huge \textbf{\myTitleLoc}}\\[0.4cm]
-
         \HRule\\[1.5cm]
     \end{center}
-
     \begin{align*}
         &\text{By:} & &\text{\myNameLoc}\\
         &\text{Research Advisor:} & &\text{\myAdvisorLoc}\\
@@ -65,7 +69,6 @@
 %-----------------------------------------------------------------------------
 % Custom Headers and Footers
 %-----------------------------------------------------------------------------
-\usepackage{fancyhdr}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0.4pt}
 \fancyhead{}
@@ -87,27 +90,20 @@
 %-----------------------------------------------------------------------------
 % Custom referencing
 %-----------------------------------------------------------------------------
+% Referencing Chapters
+\newcommand{\chpref}[1]{Chapter~\ref{#1}}
+% Referencing Sections
+\newcommand{\secref}[1]{Section~\ref{#1}}
+% Referencing Appendicies
+\newcommand{\appref}[1]{Appendix~\ref{#1}}
 % Referencing equations
-% Use `~\eqref{eq:1}'
+\renewcommand{\eqref}[1]{Equation~(\ref{#1})}
 % Referencing figures
 \newcommand{\figref}[1]{Figure~\ref{#1}}
 % Referencing tables
 \newcommand{\tabref}[1]{Table~\ref{#1}}
 
 %-----------------------------------------------------------------------------
-% bibliography settings
+% Bibliography settings
 %-----------------------------------------------------------------------------
-\usepackage[backend=biber,style=numeric,sorting=ynt]{biblatex}
 \addbibresource{main.bib}
-
-%-----------------------------------------------------------------------------
-% Enabling figures
-%-----------------------------------------------------------------------------
-\usepackage{graphicx}
-\graphicspath{{figures/}}
-\usepackage{epstopdf}
-
-%-----------------------------------------------------------------------------
-% Dummy text
-%-----------------------------------------------------------------------------
-\usepackage{lipsum}

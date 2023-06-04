@@ -27,6 +27,7 @@
 \usepackage{float}
 \usepackage{geometry}
 \usepackage{graphicx,epstopdf}
+\usepackage{hyperref}
 \usepackage{lipsum}
 
 %-----------------------------------------------------------------------------

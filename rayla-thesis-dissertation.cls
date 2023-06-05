@@ -92,11 +92,16 @@
 %-----------------------------------------------------------------------------
 % Custom referencing
 %-----------------------------------------------------------------------------
-\newcommand{\myRef}[2]{
-    \ifthenelse{\equal{#1}{Equation}\OR\equal{#1}{System}}
+\DeclareRobustCommand{\myref}[2][]{%
+    \ifthenelse{\equal{#1}{Equation} \OR \equal{#1}{System} \OR \equal{#1}{Model} \OR \equal{#1}{Matrix}}
     {#1~\eqref{#2}}
-    {#1~\ref{#2}}
+    {#1~\ref{#2}}%
 }
+
+%-----------------------------------------------------------------------------
+% Inclusion of chapter number in equation numbering
+%-----------------------------------------------------------------------------
+\numberwithin{equation}{chapter}
 
 %-----------------------------------------------------------------------------
 % Bibliography settings
